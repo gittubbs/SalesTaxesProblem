@@ -90,13 +90,13 @@ You need to have one file for one JSON representing an item.
 The JSON needs to be **on one line only**.
 
 Required keys are:
-"name" as a String
-"price" as a Double
-"isExempt" as a Boolean
-"isImported" as Boolean
+- "name" as a String
+- "price" as a Double
+- "isExempt" as a Boolean
+- "isImported" as Boolean
 
 Optional key is:
-"quantity".
+- "quantity".
 
 This last key, even if it's not necessary for craft an Item, it will be needed for the Shopping Basket.
 ## Make it run!!!
