@@ -73,7 +73,9 @@ BigDecimals were necessary in order to have arbitrary precise rounding methods. 
 ![alt text](https://github.com/gittubbs/SalesTaxesProblem/blob/master/uml/strategy.jpg?raw=true)
 
 ### That's exciting! What are other curiosities about this project?
-For the first time I developed a piece of code with [TDD](https://en.wikipedia.org/wiki/Test-driven_development "TDD"). The Class' name is *JSONItemConverter*. Even if according to this [StackOverflow question](https://stackoverflow.com/questions/34571/how-do-i-test-a-class-that-has-private-methods-fields-or-inner-classes "StackOverflow question") it is *not* a good practice to test private methods directly, I used [Java Reflection](https://stackoverflow.com/questions/37628/what-is-reflection-and-why-is-it-useful "Java Reflection") for a test case in *ShoppingBasketListBDTest*. I admit that it was fun :P
+For the first time I developed a piece of code with [TDD](https://en.wikipedia.org/wiki/Test-driven_development "TDD"). The Class' name is *JSONItemConverter*.
+
+Even if according to this [StackOverflow question](https://stackoverflow.com/questions/34571/how-do-i-test-a-class-that-has-private-methods-fields-or-inner-classes "StackOverflow question") it is *not* a good practice to test private methods directly, I used [Java Reflection](https://stackoverflow.com/questions/37628/what-is-reflection-and-why-is-it-useful "Java Reflection") for a test case in *ShoppingBasketListBDTest*. I admit that it was fun :P
 
 ### Did you use external libraries?
 **YES**, json-simple library is used. I need it for reading Items from a local file formatted in JSON. I figured you'd like a system to push data into the software more intelligent than hard-coded class or *manual feeding*.
@@ -83,4 +85,28 @@ I've generated Javadocs (for private methodes as well). You can find it in **doc
 There are some UML in jpg in the **uml** folder. They've been generated with an Eclipse plug-in. Sources are included.
 The Packages diagram has been manually written with [Violet UML Editor](http://alexdp.free.fr/violetumleditor/page.php "... Made by Cay Horstmann...").
 
+### Some more informations on JSON input
+You need to have one file for one JSON representing an item.
+The JSON needs to be **on one line only**.
+
+Required keys are:
+"name" as a String
+"price" as a Double
+"isExempt" as a Boolean
+"isImported" as Boolean
+
+Optional key is:
+"quantity".
+
+This last key, even if it's not necessary for craft an Item, it will be needed for the Shopping Basket.
 ## Make it run!!!
+Do you have the [latest JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)?
+Of course you do!
+
+1. Download the exectuable jar file from bin directory.
+2. Open a terminal
+3. type:  java -jar salestaxesproblem.jar
+4. follow onscreen instructions.
+
+Please, don't try to feed this software with bad data, if you create a weird JSON, an Exception will be waiting for you.
+Same if you put non-numbers in the manual feeding phase, it will just crash.
