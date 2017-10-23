@@ -103,7 +103,7 @@ This last key, even if it's not necessary for craft an Item, it will be needed f
 Do you have the [latest JRE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)?
 Of course you do!
 
-1. Download the exectuable jar file from bin directory.
+1. Download the exectuable jar file from **dist** directory.
 2. Open a terminal
 3. type:  java -jar salestaxesproblem.jar
 4. follow onscreen instructions.
